@@ -32,3 +32,40 @@ h1, h2 {
 p, li {
     font-family: 'Outfit', sans-serif;
 }
+
+body {
+    background-color: var(--Stone100);
+}
+
+main {
+    background-color: var(--White);
+    
+    display: flex;
+    flex-direction: column;
+}
+
+img {
+    width: 100%;
+}
+
+section, header {
+    margin: 0 2rem;
+    padding: 2rem 0;
+}
+
+.preparation-time {
+    background-color: var(--Rose50);
+    padding: 1rem;
+}
+
+li {
+    margin-left: 1.5rem;
+}
+
+p, ul, ol{
+    margin: 1rem 0;
+}
+
+.divider {
+    border-bottom: 1px solid var(--Stone600);
+}
