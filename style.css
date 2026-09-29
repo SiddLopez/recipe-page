@@ -26,19 +26,16 @@
     padding: 0;
 }
 
+body {
+    background-color: var(--Stone100);
+    font-family: 'Outfit', sans-serif;
+    color: var(--Stone900);
+}
+
 .heading {
     font-family: 'YoungSerif', serif;
     font-weight: 400;
-    margin-top: 2rem;
     margin-bottom: 1rem;
-}
-p, li {
-    font-family: 'Outfit', sans-serif;
-}
-
-body {
-    background-color: var(--Stone100);
-    color: var(--Stone900)
 }
 
 main {
@@ -52,12 +49,14 @@ img {
     width: 100%;
 }
 
-section, header {
+header {
     margin: 0 2rem;
+    padding-top: 2rem;
 }
 
-section {
-    padding-bottom: 2rem;
+section{
+    margin: 0 2rem;
+    padding: 2rem 0;
 }
 
 .preparation-time {
@@ -70,15 +69,15 @@ li {
     margin-left: 1.5rem;
 }
 
-ol, ul, p :not(.preparation-time p) {
-    margin-top: 1rem 0;
+ol, ul, p:not(.preparation-time p) {
+    margin: 1rem 0;
 }
 
 .divider {
     border-bottom: 1px solid var(--Stone150);
 }
 
-.brown, .divider  ul li::marker, .divider  ol li::marker{
+.brown, :is(ul, ol) li::marker {
     color: var(--Brown800);
 }
 
@@ -87,7 +86,6 @@ table {
     width: 100%;
     table-layout: fixed;
     border-collapse: collapse;
-    margin-top: 1rem;
     th {
         font-weight: normal;
         text-align: left;
