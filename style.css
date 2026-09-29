@@ -28,6 +28,9 @@
 
 h1, h2 {
     font-family: 'YoungSerif', serif;
+    font-weight: 400;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
 }
 p, li {
     font-family: 'Outfit', sans-serif;
@@ -35,6 +38,7 @@ p, li {
 
 body {
     background-color: var(--Stone100);
+    color: var(--Stone900)
 }
 
 main {
@@ -50,22 +54,50 @@ img {
 
 section, header {
     margin: 0 2rem;
-    padding: 2rem 0;
+}
+
+section {
+    padding-bottom: 2rem;
 }
 
 .preparation-time {
     background-color: var(--Rose50);
-    padding: 1rem;
+    padding: 2rem;
+    border-radius: 0.5rem;
 }
 
 li {
     margin-left: 1.5rem;
 }
 
-p, ul, ol{
-    margin: 1rem 0;
+ol, ul, p :not(.preparation-time p) {
+    margin-top: 1rem 0;
 }
 
 .divider {
-    border-bottom: 1px solid var(--Stone600);
+    border-bottom: 1px solid var(--Stone150);
+}
+
+.brown, .divider  ul li::marker, .divider  ol li::marker{
+    color: var(--Brown800);
+}
+
+table {
+    font-family: 'Outfit', sans-serif;
+    width: 100%;
+    table-layout: fixed;
+    border-collapse: collapse;
+    margin-top: 1rem;
+    th {
+        font-weight: normal;
+        text-align: left;
+        text-indent: 2rem;
+    }
+    td {
+        text-indent: 0.7rem;
+    }
+    .row:not(.borderless){
+        padding: 0.5rem 0;
+        border-bottom: 1px solid var(--Stone150);
+    }
 }
