@@ -12,7 +12,6 @@
 @font-face {
     font-family: 'YoungSerif';
     src: url('./assets/fonts/young-serif/YoungSerif-Regular.ttf');
-    font-weight: 400;
 }
 
 @font-face {
@@ -29,12 +28,23 @@
 body {
     background-color: var(--Stone100);
     font-family: 'Outfit', sans-serif;
-    color: var(--Stone900);
+    color: var(--Stone600)
+}
+
+h1 {
+    font-size: 2.2rem;
+    line-height: 2.2rem;
+}
+
+h2 {
+    font-size: 1.75rem;
 }
 
 .heading {
+    color: var(--Stone900);
     font-family: 'YoungSerif', serif;
     font-weight: 400;
+
     margin-bottom: 1rem;
 }
 
@@ -63,21 +73,36 @@ section{
     background-color: var(--Rose50);
     padding: 2rem;
     border-radius: 0.5rem;
+    margin-top: 2rem;
+}
+
+.preparation-time ul li::marker, .preparation-time p {
+    color: var(--Rose800);
+}
+
+.preparation-time p {
+    font-weight: 600;
+    font-size: 1.25rem;
 }
 
 li {
-    margin-left: 1.5rem;
+    padding-left: 1rem;
+    margin: 0.5rem 0 0 1.5rem;
+}
+
+li::marker {
+    font-weight: 700;
 }
 
 ol, ul, p:not(.preparation-time p) {
-    margin: 1rem 0;
+    margin-top: 1rem;
 }
 
 .divider {
     border-bottom: 1px solid var(--Stone150);
 }
 
-.brown, :is(ul, ol) li::marker {
+.brown, li::marker {
     color: var(--Brown800);
 }
 
@@ -86,6 +111,7 @@ table {
     width: 100%;
     table-layout: fixed;
     border-collapse: collapse;
+    margin-top: 1rem;
     th {
         font-weight: normal;
         text-align: left;
@@ -94,8 +120,10 @@ table {
     td {
         text-indent: 0.7rem;
     }
+    .row {
+        padding: 1rem 0;
+    }
     .row:not(.borderless){
-        padding: 0.5rem 0;
         border-bottom: 1px solid var(--Stone150);
     }
 }
