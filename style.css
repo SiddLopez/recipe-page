@@ -44,7 +44,7 @@ h2 {
     color: var(--Stone900);
     font-family: 'YoungSerif', serif;
     font-weight: 400;
-
+    
     margin-bottom: 1rem;
 }
 
@@ -55,18 +55,40 @@ main {
     flex-direction: column;
 }
 
+.info {
+    padding: 2rem;
+}
+
+@media screen and (min-width: 576px){
+    body {
+        display: flex;
+        justify-content: center;
+    }
+
+    main {
+        display: flex;
+        width: clamp(10rem, 51vw, 60rem);
+        margin: 10rem 0;
+
+        border-radius: 1.5rem;
+    }
+
+    img {
+        padding: 2rem;
+        border-radius: 2.75rem;
+    }
+}
+
 img {
     width: 100%;
 }
 
-header {
-    margin: 0 2rem;
-    padding-top: 2rem;
+section:not(.last-section) {
+    padding: 2rem 0;
 }
 
-section{
-    margin: 0 2rem;
-    padding: 2rem 0;
+.last-section {
+    padding-top: 2rem;
 }
 
 .preparation-time {
