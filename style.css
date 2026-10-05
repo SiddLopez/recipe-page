@@ -7,6 +7,9 @@
     --Brown800: hsl(14, 45%, 36%);
     --Rose800: hsl(332, 51%, 32%);
     --Rose50: hsl(330, 100%, 98%);
+
+    --paddingCard: clamp(2.000rem, calc(1.817rem + 0.78vw), 2.500rem);
+    --headingSize: clamp(2.200rem, calc(1.999rem + 0.859vw), 2.750rem);
 }
 
 @font-face {
@@ -59,26 +62,6 @@ main {
     padding: 2rem;
 }
 
-@media screen and (min-width: 576px){
-    body {
-        display: flex;
-        justify-content: center;
-    }
-
-    main {
-        display: flex;
-        width: clamp(10rem, 51vw, 60rem);
-        margin: 10rem 0;
-
-        border-radius: 1.5rem;
-    }
-
-    img {
-        padding: 2rem;
-        border-radius: 2.75rem;
-    }
-}
-
 img {
     width: 100%;
 }
@@ -93,7 +76,7 @@ section:not(.last-section) {
 
 .preparation-time {
     background-color: var(--Rose50);
-    padding: 2rem;
+    padding: 1.5rem;
     border-radius: 0.5rem;
     margin-top: 2rem;
 }
@@ -147,5 +130,54 @@ table {
     }
     .row:not(.borderless){
         border-bottom: 1px solid var(--Stone150);
+    }
+}
+
+@media screen and (min-width: 576px){
+    body {
+        display: flex;
+        justify-content: center;
+    }
+
+    main {
+        display: flex;
+        width: clamp(10rem, 51vw, 50rem);
+        margin: 10rem 0;
+        padding: var(--paddingCard);
+
+        border-radius: 1.5rem;
+    }
+
+    img {
+        border-radius: 1rem;
+    }
+
+    .info {
+        padding: 0;
+        padding-top: var(--paddingCard);
+    }
+
+    h1.heading {
+        font-size: var(--headingSize);
+        margin-bottom: 2rem;
+    }
+
+    h2.heading {
+        font-size: 1.9rem;
+    }
+    
+    p, li, table {
+        font-size: 18px;
+    }
+
+    .preparation-time p {
+        font-size: 1.35rem;
+    }
+
+    .attribution{
+        position: fixed;
+        bottom: 0.5vw;
+        font-size: 1vw;
+        align-self: center;
     }
 }
